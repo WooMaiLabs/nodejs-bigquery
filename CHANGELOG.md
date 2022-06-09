@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/bigquery?activeTab=versions
 
+## [6.0.1](https://github.com/googleapis/nodejs-bigquery/compare/v6.0.0...v6.0.1) (2022-06-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @google-cloud/paginator to v4 ([#1116](https://github.com/googleapis/nodejs-bigquery/issues/1116)) ([073abc0](https://github.com/googleapis/nodejs-bigquery/commit/073abc0b22271627f79d6744995d820d3bd62631))
+
 ## [6.0.0](https://github.com/googleapis/nodejs-bigquery/compare/v5.12.0...v6.0.0) (2022-05-20)
 
 
