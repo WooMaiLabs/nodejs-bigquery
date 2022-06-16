@@ -80,6 +80,7 @@ export type RowMetadata = any;
 
 export type InsertRowsOptions = bigquery.ITableDataInsertAllRequest & {
   createInsertId?: boolean;
+  insertId?: string;
   partialRetries?: number;
   raw?: boolean;
   schema?: string | {};
@@ -2170,6 +2171,8 @@ class Table extends ServiceObject {
 
         if (options.createInsertId !== false) {
           encoded.insertId = uuid.v4();
+        } else if (options.insertId) {
+          encoded.insertId = options.insertId;
         }
 
         return encoded;
@@ -2177,6 +2180,7 @@ class Table extends ServiceObject {
     }
 
     delete json.createInsertId;
+    delete json.insertId;
     delete json.partialRetries;
     delete json.raw;
     delete json.schema;
